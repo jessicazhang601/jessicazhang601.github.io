@@ -1,0 +1,19 @@
+---
+title: "R Markdown and Leaflet assignment"
+output: html_document
+author: Lingling Zhang
+date: August 8, 2017
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## My favorite seafood restaurant in New York City locates in Chelsea Market
+
+```{r c}
+library(leaflet)
+chelseaMarket <- leaflet() %>% addTiles() 
+chelseaMarket <- chelseaMarket %>% addMarkers(lat=40.742813, lng=-74.004813, popup = "my favorite seafood place in New York")
+chelseaMarket
+```
